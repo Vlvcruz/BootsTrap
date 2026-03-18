@@ -1,34 +1,36 @@
-
 body { 
     padding-top: 70px; 
     background-color: #f8f9fa; 
 }
-
+ 
 .card-img-top { 
     height: 180px; 
     object-fit: cover; 
 }
-
+ 
 .carousel-item img {
     height: 400px;
     object-fit: cover;
 }
-
+ 
 section {
     padding-top: 20px;
     margin-bottom: 40px;
 }
-
-
+ 
 #main-content { 
     min-height: 120vh; 
 }
-
-
+ 
 .offcanvas-body .list-group-item {
     transition: background 0.3s;
 }
-
+ 
 .offcanvas-body .list-group-item:hover {
     background-color: #343a40 !important;
+}
+ 
+.dashed {
+    border-style: dashed !important;
+    min-height: 200px;
 }
