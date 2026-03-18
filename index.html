@@ -1,154 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduFlow - Painel Administrativo</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduFlow - Painel Administrativo</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
-
+ 
     <nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-        <div class="container-fluid">
-            <button class="btn btn-outline-light me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-                <i class="bi bi-list"></i>
-            </button>
-            <a class="navbar-brand fw-bold" href="#">EduFlow</a>
-            <div class="collapse navbar-collapse">
-                <ul class="nav nav-pills ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#secao-destaque">Destaques</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#secao-cursos">Cursos</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+<div class="container-fluid">
+<button class="btn btn-outline-light me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+<i class="bi bi-list"></i>
+</button>
+<a class="navbar-brand fw-bold" href="#">EduFlow</a>
+<div class="collapse navbar-collapse">
+<ul class="nav nav-pills ms-auto">
+<li class="nav-item"><a class="nav-link text-white" href="#secao-destaque">Destaques</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#secao-cursos">Cursos</a></li>
+</ul>
+</div>
+</div>
+</nav>
+ 
     <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasMenu">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Gestão Interna</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary"><i class="bi bi-journal-bookmark me-2"></i>Cursos</a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary"><i class="bi bi-gear me-2"></i>Configurações</a>
-            </ul>
-        </div>
-    </div>
-
+<div class="offcanvas-header">
+<h5 class="offcanvas-title">Gestão Interna</h5>
+<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+<ul class="list-group list-group-flush">
+<a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+<a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary"><i class="bi bi-journal-bookmark me-2"></i>Cursos</a>
+<a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary"><i class="bi bi-gear me-2"></i>Configurações</a>
+</ul>
+</div>
+</div>
+ 
     <main class="container" id="main-content">
-        
-        <section id="secao-destaque">
-            <div id="carouselCursos" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200" class="d-block w-100" alt="Curso 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200" class="d-block w-100" alt="Curso 2">
-                    </div>
-                </div>
-            </div>
-        </section>
-
+<div class="row my-4">
+<div class="col-12 text-center">
+<button id="btnWelcome" class="btn btn-warning btn-lg shadow">
+<i class="bi bi-emoji-smile"></i> Clique para Boas-vindas
+</button>
+</div>
+</div>
+<section id="secao-destaque">
+<div id="carouselCursos" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200" class="d-block w-100" alt="Curso 1">
+</div>
+<div class="carousel-item">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200" class="d-block w-100" alt="Curso 2">
+</div>
+</div>
+</div>
+</section>
+ 
         <section id="secao-cursos">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2>Cursos Cadastrados</h2>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddCurso" 
+<div class="d-flex justify-content-between align-items-center mb-4">
+<h2>Cursos Cadastrados</h2>
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddCurso" 
                         data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Adicione um novo curso ao catálogo.">
-                    <i class="bi bi-plus-circle me-2"></i>Adicionar Curso
-                </button>
-            </div>
-
+<i class="bi bi-plus-circle me-2"></i>Adicionar Curso
+</button>
+</div>
+ 
             <div class="mb-4">
-                <label class="form-label small text-muted">Porcentagem de cursos cadastrados</label>
-                <div class="progress" style="height: 8px;">
-                    <div class="progress-bar bg-info w-75" role="progressbar"></div>
-                </div>
-            </div>
-
+<label class="form-label small text-muted">Porcentagem de cursos cadastrados</label>
+<div class="progress" style="height: 8px;">
+<div class="progress-bar bg-info w-75" role="progressbar"></div>
+</div>
+</div>
+ 
             <div class="dropdown mb-4">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                     Categoria
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Frontend</a></li>
-                    <li><a class="dropdown-item" href="#">Backend</a></li>
-                    <li><a class="dropdown-item" href="#">SQL</a></li>
-                    <li><a class="dropdown-item" href="#">MOBILE</a></li>
-                    <li><a class="dropdown-item" href="#">UI E UX</a></li>
-                </ul>
-            </div>
-
+</button>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="#">Frontend</a></li>
+<li><a class="dropdown-item" href="#">Backend</a></li>
+<li><a class="dropdown-item" href="#">SQL</a></li>
+<li><a class="dropdown-item" href="#">MOBILE</a></li>
+<li><a class="dropdown-item" href="#">UI E UX</a></li>
+</ul>
+</div>
+ 
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">PHP Moderno</h5>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse" data-bs-target="#desc1">Ver Detalhes</button>
-                            <div class="collapse mt-2" id="desc1">
-                                <p class="small text-muted">Curso completo de PHP </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex align-items-center justify-content-center border rounded dashed">
-                    <div class="spinner-border text-secondary" role="status"></div>
-                </div>
-            </div>
-
+<div class="col-md-4">
+<div class="card h-100 shadow-sm">
+<img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400" class="card-img-top" alt="...">
+<div class="card-body">
+<h5 class="card-title">PHP Moderno</h5>
+<button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse" data-bs-target="#desc1">Ver Detalhes</button>
+<div class="collapse mt-2" id="desc1">
+<p class="small text-muted">Curso completo de PHP </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 d-flex align-items-center justify-content-center border rounded dashed">
+<div class="spinner-border text-secondary" role="status"></div>
+</div>
+</div>
+ 
             <nav class="mt-5">
-                <ul class="pagination">
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                </ul>
-            </nav>
-        </section>
-    </main>
-
+<ul class="pagination">
+<li class="page-item active"><a class="page-link" href="#">1</a></li>
+<li class="page-item"><a class="page-link" href="#">2</a></li>
+</ul>
+</nav>
+</section>
+</main>
+ 
     <div class="modal fade" id="modalAddCurso" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Novo Cadastro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="needs-validation" id="formCurso" novalidate>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="f1" placeholder="Nome" required>
-                            <label for="f1">Título do Curso</label>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Duração</span>
-                            <input type="text" class="form-control" placeholder="ex: 40h">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Nível de dificuldade</label>
-                            <input type="range" class="form-range" min="0" max="5">
-                        </div>
-                        <button type="submit" class="btn btn-success w-100">Confirmar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Novo Cadastro</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<form class="needs-validation" id="formCurso" novalidate>
+<div class="form-floating mb-3">
+<input type="text" class="form-control" id="f1" placeholder="Nome" required>
+<label for="f1">Título do Curso</label>
+</div>
+<div class="input-group mb-3">
+<span class="input-group-text">Duração</span>
+<input type="text" class="form-control" placeholder="ex: 40h">
+</div>
+<div class="mb-3">
+<label class="form-label">Nível de dificuldade</label>
+<input type="range" class="form-range" min="0" max="5">
+</div>
+<button type="submit" class="btn btn-success w-100">Confirmar</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+ 
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div id="liveToast" class="toast text-white bg-success" role="alert">
-            <div class="d-flex">
-                <div class="toast-body">Dados salvos com sucesso!</div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+<div id="liveToast" class="toast text-white bg-success" role="alert">
+<div class="d-flex">
+<div class="toast-body">Dados salvos com sucesso!</div>
+<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+</div>
+</div>
+</div>
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
